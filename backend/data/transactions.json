@@ -1,0 +1,26 @@
+[
+  {
+    "transactionId": "d0f4fd45-eb3a-48ab-bcb9-7a8fbe1cd0c5",
+    "customerId": "dc9d6bd3-1a2d-412b-ae2e-f3beaa1a092e",
+    "amount": 100,
+    "currency": "USD",
+    "status": "success",
+    "timestamp": "2025-11-20T06:06:53.882Z"
+  },
+  {
+    "transactionId": "81a4e7e9-3e08-482b-94a5-18d7568bb059",
+    "customerId": "dc9d6bd3-1a2d-412b-ae2e-f3beaa1a092e",
+    "amount": 300,
+    "currency": "USD",
+    "status": "success",
+    "timestamp": "2025-11-20T06:07:52.122Z"
+  },
+  {
+    "transactionId": "0164fd3a-6a2c-46c0-b0dc-ec6295e5a001",
+    "customerId": "02f34640-4c0c-44f2-9e81-66f0be1158ed",
+    "amount": 3000,
+    "currency": "USD",
+    "status": "success",
+    "timestamp": "2025-11-20T06:11:00.322Z"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "customerId": "dc9d6bd3-1a2d-412b-ae2e-f3beaa1a092e",
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john@example.com",
+    "paymentToken": "tok_1234",
+    "createdAt": "2025-11-19T05:52:24.495Z"
+  },
+  {
+    "customerId": "02f34640-4c0c-44f2-9e81-66f0be1158ed",
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "email": "jane@example.com",
+    "paymentToken": "tok_5678",
+    "createdAt": "2025-11-20T06:08:40.856Z"
+  }
+]
