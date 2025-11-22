@@ -54,7 +54,8 @@ function App() {
               backgroundColor: lastTransactionStatus === 'success' ? '#e8f5e9' : '#ffebee',
               border: `1px solid ${lastTransactionStatus === 'success' ? '#4caf50' : '#f44336'}`,
               borderRadius: '4px',
-              marginBottom: '2rem'
+              marginBottom: '2rem',
+              color: lastTransactionStatus === 'success' ? '#1b5e20' : '#b71c1c'
             }}>
               <strong>
                 {lastTransactionStatus === 'success' ? 'Transaction Successful!' : 'Transaction Failed'}

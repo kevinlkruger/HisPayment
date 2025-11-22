@@ -47,11 +47,11 @@ function TransactionHistory({ customerId }: TransactionHistoryProps) {
                         <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                             <thead>
                                 <tr style={{ backgroundColor: '#f0f0f0' }}>
-                                    <th style={{ border: '1px solid #ddd', padding: '0.5rem' }}>Transaction ID</th>
-                                    <th style={{ border: '1px solid #ddd', padding: '0.5rem' }}>Amount</th>
-                                    <th style={{ border: '1px solid #ddd', padding: '0.5rem' }}>Currency</th>
-                                    <th style={{ border: '1px solid #ddd', padding: '0.5rem' }}>Status</th>
-                                    <th style={{ border: '1px solid #ddd', padding: '0.5rem' }}>Timestamp</th>
+                                    <th style={{ border: '1px solid #ddd', padding: '0.5rem', color: '#000' }}>Transaction ID</th>
+                                    <th style={{ border: '1px solid #ddd', padding: '0.5rem', color: '#000' }}>Amount</th>
+                                    <th style={{ border: '1px solid #ddd', padding: '0.5rem', color: '#000' }}>Currency</th>
+                                    <th style={{ border: '1px solid #ddd', padding: '0.5rem', color: '#000' }}>Status</th>
+                                    <th style={{ border: '1px solid #ddd', padding: '0.5rem', color: '#000' }}>Timestamp</th>
                                 </tr>
                             </thead>
                             <tbody>
