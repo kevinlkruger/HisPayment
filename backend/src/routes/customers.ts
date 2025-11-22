@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express';
-import { v4 as uuidv4 } from 'uuid';
+import crypto from 'crypto';
 import { CreateCustomerRequest, Customer } from '../types';
 import { saveCustomer } from '../data/storage';
 import { isValidName, isValidEmail } from '../validators';
@@ -30,7 +30,7 @@ router.post('/', (req: Request, res: Response) => {
 
     // Create customer
     const customer: Customer = {
-        customerId: uuidv4(),
+        customerId: crypto.randomUUID(),
         firstName,
         lastName,
         email: email.toLowerCase(),
