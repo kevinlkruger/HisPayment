@@ -5,6 +5,7 @@ export interface Customer {
     email: string;
     paymentToken: string;
     createdAt: string;
+    blockedUntil?: string;
 }
 
 export interface Transaction {
@@ -28,4 +29,13 @@ export interface CreateTransactionRequest {
     customerId: string;
     amount: number;
     currency: string;
+}
+
+export interface FraudAlert {
+    alertId: string;
+    customerId: string;
+    transactionCount: number;
+    timeWindow: string;
+    timestamp: string;
+    blockedUntil: string;
 }

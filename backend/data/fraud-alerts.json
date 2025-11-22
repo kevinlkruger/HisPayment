@@ -1,0 +1,10 @@
+[
+  {
+    "alertId": "28987417-1bbc-4b18-93a4-01df9ffcdf39",
+    "customerId": "7c7f141a-33e6-463d-9c7a-4fff46fe7275",
+    "transactionCount": 6,
+    "timeWindow": "2 minutes",
+    "timestamp": "2025-11-22T02:51:41.767Z",
+    "blockedUntil": "2025-11-22T02:53:41.765Z"
+  }
+]
