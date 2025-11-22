@@ -50,6 +50,13 @@ export const customerAPI = {
         const response = await api.get<Customer>(`/customers/${customerId}`);
         return response.data;
     },
+
+    searchCustomers: async (query: string) => {
+        const response = await api.get<{ customers: Customer[] }>('/customers/search', {
+            params: { query }
+        });
+        return response.data;
+    },
 };
 
 export const transactionAPI = {

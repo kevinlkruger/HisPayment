@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { transactionAPI, type Transaction } from '../services/api';
 
 interface TransactionHistoryProps {
@@ -7,39 +7,35 @@ interface TransactionHistoryProps {
 
 function TransactionHistory({ customerId }: TransactionHistoryProps) {
     const [transactions, setTransactions] = useState<Transaction[]>([]);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
-    const [showHistory, setShowHistory] = useState(false);
 
-    const fetchTransactions = async () => {
-        setLoading(true);
-        setError('');
+    useEffect(() => {
+        const fetchTransactions = async () => {
+            setLoading(true);
+            setError('');
 
-        try {
-            const data = await transactionAPI.getCustomerTransactions(customerId);
-            setTransactions(data);
-            setShowHistory(true);
-        } catch (err: any) {
-            setError(err.response?.data?.error || 'Failed to fetch transactions');
-        } finally {
-            setLoading(false);
-        }
-    };
+            try {
+                const data = await transactionAPI.getCustomerTransactions(customerId);
+                setTransactions(data);
+            } catch (err: any) {
+                setError(err.response?.data?.error || 'Failed to fetch transactions');
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchTransactions();
+    }, [customerId]);
 
     return (
         <div style={{ marginBottom: '2rem' }}>
             <h2>Transaction History</h2>
-            <button
-                onClick={fetchTransactions}
-                disabled={loading}
-                style={{ padding: '0.5rem 1rem', marginBottom: '1rem' }}
-            >
-                {loading ? 'Loading...' : 'View Transaction History'}
-            </button>
 
+            {loading && <p>Loading transactions...</p>}
             {error && <div style={{ color: 'red', marginBottom: '1rem' }}>{error}</div>}
 
-            {showHistory && (
+            {!loading && !error && (
                 <div>
                     {transactions.length === 0 ? (
                         <p>No transactions found for this customer.</p>
