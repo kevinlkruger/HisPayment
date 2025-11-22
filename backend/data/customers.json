@@ -143,5 +143,22 @@
     "email": "user2@example.com",
     "paymentToken": "tok_222",
     "createdAt": "2025-11-22T21:30:21.607Z"
+  },
+  {
+    "customerId": "bb31998a-f1a4-4f72-a193-d2c68946118e",
+    "firstName": "FinalTest",
+    "lastName": "Real",
+    "email": "realfinal@test.comz",
+    "paymentToken": "tok_txnluk5x",
+    "createdAt": "2025-11-22T21:51:15.742Z",
+    "blockedUntil": "2025-11-22T21:54:09.690Z"
+  },
+  {
+    "customerId": "b1105534-92c4-411a-89f8-7f7bbc804955",
+    "firstName": "tom",
+    "lastName": "tom",
+    "email": "tomtom@tommy.comm",
+    "paymentToken": "tok_38zq421s",
+    "createdAt": "2025-11-22T22:28:41.179Z"
   }
 ]

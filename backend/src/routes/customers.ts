@@ -4,6 +4,7 @@ import { CreateCustomerRequest, Customer } from '../types';
 import { saveCustomer } from '../data/storage';
 import { isValidName, isValidEmail } from '../validators';
 import { getCustomerById, getTransactionsByCustomerId } from '../data/storage';
+import { getCustomers } from '../data/storage';
 
 const router = Router();
 
@@ -41,6 +42,34 @@ router.post('/', (req: Request, res: Response) => {
     saveCustomer(customer);
 
     res.status(200).json({ customerId: customer.customerId });
+});
+
+// Search customers by ID, name, or email
+router.get('/search', (req: Request, res: Response) => {
+    const { query } = req.query;
+
+    if (!query || typeof query !== 'string') {
+        res.status(400).json({ error: 'Search query is required' });
+        return;
+    }
+
+    const customers = getCustomers();
+    const searchLower = query.toLowerCase();
+
+    const matches = customers.filter(c =>
+        c.customerId === query ||
+        c.email.toLowerCase() === searchLower ||
+        c.firstName.toLowerCase().includes(searchLower) ||
+        c.lastName.toLowerCase().includes(searchLower) ||
+        `${c.firstName} ${c.lastName}`.toLowerCase().includes(searchLower)
+    );
+
+    if (matches.length === 0) {
+        res.status(404).json({ error: 'No customers found' });
+        return;
+    }
+
+    res.status(200).json({ customers: matches });
 });
 
 // GET single customer by ID

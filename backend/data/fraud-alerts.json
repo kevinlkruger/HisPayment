@@ -6,5 +6,13 @@
     "timeWindow": "2 minutes",
     "timestamp": "2025-11-22T02:51:41.767Z",
     "blockedUntil": "2025-11-22T02:53:41.765Z"
+  },
+  {
+    "alertId": "16f4a376-5193-4d25-ba59-79be1389709b",
+    "customerId": "bb31998a-f1a4-4f72-a193-d2c68946118e",
+    "transactionCount": 6,
+    "timeWindow": "2 minutes",
+    "timestamp": "2025-11-22T21:52:09.691Z",
+    "blockedUntil": "2025-11-22T21:54:09.690Z"
   }
 ]
